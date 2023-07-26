@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slider Slick</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <style>
+      .slide,
+      .slide2 {
+        position: relative;
+        width: 250px !important;
+        height: 250px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .slide p,
+      .slide2 p {
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: #ff225f;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      .slide {
+        background: #04e1a2;
+      }
+      .slide2 {
+        background: #0081c4;
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        padding: 1rem 0;
+
+        list-style-type: none;
+      }
+
+      .slick-dots li {
+        margin: 0 0.25rem;
+        list-style: none;
+      }
+
+      .slick-dots button {
+        display: block;
+        width: 2rem;
+        height: 0.5rem;
+        padding: 0;
+        border: none;
+        background-color: #80ccb7;
+
+        text-indent: -9999px;
+      }
+
+      .slick-dots li.slick-active button {
+        background-color: rgb(0, 68, 137);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide">
+        01
+        <p>01</p>
+      </div>
+      <div class="slide2">
+        02
+        <p>02</p>
+      </div>
+      <div class="slide">
+        03
+        <p>03</p>
+      </div>
+      <div class="slide2">
+        04
+        <p>04</p>
+      </div>
+      <div class="slide">
+        05
+        <p>05</p>
+      </div>
+      <div class="slide2">
+        06
+        <p>06</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true,
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          fade: true,
+          fadeSpeed: 1000,
+        });
+      });
+    </script>
+  </body>
+</html>
